@@ -26,7 +26,7 @@ describe('Tictactoe load test', function () {
     /* Assignment: Find appropriate numbers to configure the load test so it passes on your buildserver
     * under normal load. */
     let timelimit = 1000;
-    let count = 1000;
+    let count = 25;
 
     beforeEach(function (done) {
         jasmine.DEFAULT_TIMEOUT_INTERVAL = timelimit;
@@ -34,8 +34,9 @@ describe('Tictactoe load test', function () {
         fs.existsSync("./user-api-outgoing-commands.log") && fs.unlinkSync('./user-api-outgoing-commands.log');
 
         let testapi = testAPI();
-
+        console.log('Blaaa 3');
         testapi.waitForCleanDatabase().cleanDatabase().then(() => {
+          console.log('Blaaa 3');
             testapi.disconnect();
             done();
         });
@@ -107,4 +108,3 @@ describe('Tictactoe load test', function () {
         }
     });
 });
-

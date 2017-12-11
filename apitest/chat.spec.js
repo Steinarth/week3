@@ -46,4 +46,3 @@ describe('User chat API', function(){
     });
 
 });
-

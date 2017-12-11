@@ -24,6 +24,7 @@ describe('User chat load test', function(){
         jasmine.DEFAULT_TIMEOUT_INTERVAL = timelimit;
         let testapi = testAPI();
         testapi.waitForCleanDatabase().cleanDatabase().then(()=>{
+          console.log('Blaaaa2');
             testapi.disconnect();
             done();
         });
@@ -62,5 +63,3 @@ describe('User chat load test', function(){
             });
     });
 });
-
-
