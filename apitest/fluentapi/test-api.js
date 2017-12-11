@@ -42,6 +42,7 @@ module.exports=function(injected){
             cleanDatabase:()=>{
               console.log('BLaaaa1');
                 let cmdId = commandId++;
+//                 console.debug("[TEST] apitest/fluentapi/test-api.js;45: routingContext.commandRouter.routeMessage({commandId: 0, type: \"cleanDatabase\"})"); 
                 routingContext.commandRouter.routeMessage({commandId:cmdId, type:"cleanDatabase"});
                 return me;
 
