@@ -15,7 +15,7 @@ node {
     stage('Test') {
         sh 'npm run test:nowatch'
         sh 'cd client && npm run test:jenkins'
-        sh 'npm run migratedb:dev'
+    //    sh 'npm run migratedb:dev'
         sh 'npm run apitest'
         sh 'npm run loadtest'
     }
