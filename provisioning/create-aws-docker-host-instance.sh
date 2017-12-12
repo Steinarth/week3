@@ -11,7 +11,7 @@ echo No instance information present, continuing.
 
 USERNAME=$(aws iam get-user --query 'User.UserName' --output text)
 
-SECURITY_GROUP_NAME=hgop-${USERNAME}
+SECURITY_GROUP_NAME=hgop-jenkins-${USERNAME}
 
 echo "Using security group name ${SECURITY_GROUP_NAME}"
 
@@ -57,4 +57,4 @@ echo Using CIDR ${MY_CIDR} for access restrictions.
 
 set +e
 aws ec2 authorize-security-group-ingress --group-name ${SECURITY_GROUP_NAME} --protocol tcp --port 22 --cidr ${MY_CIDR}
-aws ec2 authorize-security-group-ingress --group-name ${SECURITY_GROUP_NAME} --protocol tcp --port 80 --cidr ${MY_CIDR}
+aws ec2 authorize-security-group-ingress --group-name ${SECURITY_GROUP_NAME} --protocol tcp --port 80 --cidr 0.0.0.0/0
