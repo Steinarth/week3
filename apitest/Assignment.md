@@ -13,23 +13,13 @@ Orders of function calls:
 ### user-api.js
 #### Assignment: Explain what the push/pop functions do for this API. What effect would it have on the fluent API if we did not have them? ####
 
-TODO
-
-## chat.spec.js ##
-
-#### There is a weak race condition here. Why ? ####
-
-todo
-
-#### There is no race condition here. Why ? ####
-
-todo
+The push and pop functions adds function operations to an array and removes and runs them sequentially, if we would not have them we would have to use another slower method like loops to run each one in a specific order.
 
 ### tic-tac-toe-game-player.js : Sequential code
 
 #### Assignment: Explain how this apparently sequential code can function to play *two* sides of the game. ####
 
-todo
+Because this code uses asynchronous method we use 'then' function to wait for and verify that userB has completed its turn before userA can make it's turn.
 
 ### tic-tac-toe-game-player.js : Failing load tests
 
@@ -39,7 +29,17 @@ After doing everything the assignment asked me to do, and trying some strange va
 
 ### tictactoe.loadtest.js
 
-#### Find appropriate numbers to configure the load test so it passes on your buildserver under normal load. ####
+#### Assignment Find appropriate numbers to configure the load test so it passes on your buildserver under normal load. ####
 
 I found out that i could finish 30 games in 1 second on my personal computer.  
 And was able to finish XXX games in 1 second on my build server.
+
+## chat.spec.js ##
+
+#### There is a weak race condition here. Why ? ####
+
+todo optional
+
+#### There is no race condition here. Why ? ####
+
+todo optional
