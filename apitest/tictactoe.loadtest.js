@@ -34,9 +34,7 @@ describe('Tictactoe load test', function () {
         fs.existsSync("./user-api-outgoing-commands.log") && fs.unlinkSync('./user-api-outgoing-commands.log');
 
         let testapi = testAPI();
-        console.log('Blaaa 3');
         testapi.waitForCleanDatabase().cleanDatabase().then(() => {
-          console.log('Blaaa 3');
             testapi.disconnect();
             done();
         });
