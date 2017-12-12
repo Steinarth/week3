@@ -13,7 +13,7 @@ node {
         }
     }
     stage('Test') {
-        npm run startpostgres && sleep 10 && npm run migratedb:dev
+        sh 'npm run startpostgres && sleep 10 && npm run migratedb:dev'
         sh 'npm run test:nowatch'
         sh 'cd client && npm run test:jenkins'
         //sh 'npm run migratedb:dev'
