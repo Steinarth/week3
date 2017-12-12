@@ -40,14 +40,15 @@ module.exports=function(injected){
             // Put in log statements that enable you to trace the messages going back and forth.
             // Result is a list of modules/functions in this source code which get invoked when cleanDatabase is called.
             cleanDatabase:()=>{
-              console.log('BLaaaa1');
+              console.log("TEST_1");
                 let cmdId = commandId++;
-//                 console.debug("[TEST] apitest/fluentapi/test-api.js;45: routingContext.commandRouter.routeMessage({commandId: 0, type: \"cleanDatabase\"})"); 
+//                 console.debug("[TEST] apitest/fluentapi/test-api.js;45: routingContext.commandRouter.routeMessage({commandId: 0, type: \"cleanDatabase\"})");
                 routingContext.commandRouter.routeMessage({commandId:cmdId, type:"cleanDatabase"});
                 return me;
 
             },
             waitForCleanDatabase:(whenClean)=>{
+              console.log("TEST_2");
                 waitingFor.push("expectDatabaseCleaned");
                 routingContext.eventRouter.on('databaseCleaned', function(chatMessage){
                     waitingFor.pop(); // expectDatabaseCleaned
@@ -57,6 +58,7 @@ module.exports=function(injected){
 
             },
             then:(whenDoneWaiting)=>{
+              console.log("TEST_3");
                 function waitLonger(){
                     if(waitingFor.length>0){
                         setTimeout(waitLonger, 0);
@@ -68,6 +70,7 @@ module.exports=function(injected){
                 return me;
             },
             disconnect:function(){
+              console.log("TEST_4");
                 routingContext.socket.disconnect();
             }
 
