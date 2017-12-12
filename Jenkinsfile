@@ -6,10 +6,10 @@ node {
     }
     stage('Setup') {
         // Prefer yarn over npm.
-        sh 'yarn install || npm install'
+        sh 'yarn install' //|| npm install'
         dir('client')
         {
-            sh 'yarn install || npm install'
+            sh 'yarn install'// || npm install'
         }
     }
     stage('Test') {
