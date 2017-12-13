@@ -18,6 +18,7 @@ node {
         sh 'cd client && npm run jenkins:test'
         sh 'npm run startserver & npm run jenkins:apitest && sleep 5 && kill $!'
     // sh 'npm run jenkins:loadtest'
+     step([$class: 'JUnitResultArchiver', testDataPublishers: [[$class: 'AttachmentPublisher']], testResults: 'build/test-reports'.xml'])
     }
     stage('Deploy') {
     withCredentials([usernamePassword(credentialsId: 'cdf0c207-7446-4528-bb45-5d93e0df74c8', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USER')]) {
