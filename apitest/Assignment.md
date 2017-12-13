@@ -32,7 +32,7 @@ After doing everything the assignment asked me to do, and trying some strange va
 #### Assignment Find appropriate numbers to configure the load test so it passes on your buildserver under normal load. ####
 
 I found out that i could finish 30 games in 1 second on my personal computer.  
-And was able to finish XXX games in 1 second on my build server.
+And was able to finish 15 games in 1 second on my build server.
 
 ## chat.spec.js ##
 
