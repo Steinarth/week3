@@ -23,7 +23,7 @@ node {
     withCredentials([usernamePassword(credentialsId: 'cdf0c207-7446-4528-bb45-5d93e0df74c8', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USER')]) {
         sh 'docker login -u $DOCKER_USER -p $DOCKER_PASSWORD'
         sh './dockerbuild.sh'
-        sh 'cd provisioning && docker-compose up'
+        sh 'cd provisioning && /var/lib/jenkins/docker-compose up'
         sh 'npm run jenkins:apitest'
         sh 'cd provisioning && docker-compose down'
         }
