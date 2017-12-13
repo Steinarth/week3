@@ -19,7 +19,7 @@
     "start": "export NODE_PATH=./src/ && react-scripts start",
     "build": "export NODE_PATH=./src/ && react-scripts build",
     "test": "export NODE_PATH=./src/ && react-scripts test --env=jsdom  --watchAll",
-    "test:jenkins": "export NODE_PATH=./src/ && CI=true react-scripts test --env=jsdom",
+    "jenkins:test":"export NODE_PATH=./src/ && CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
 }
