@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "history": "^4.7.2",
+    "jest-cli": "^21.2.1",
     "lodash": "^4.17.2",
     "query-string": "^5.0.1",
     "react": "^16.1.1",
@@ -19,7 +20,7 @@
     "start": "export NODE_PATH=./src/ && react-scripts start",
     "build": "export NODE_PATH=./src/ && react-scripts build",
     "test": "export NODE_PATH=./src/ && react-scripts test --env=jsdom  --watchAll",
-    "jenkins:test":"export NODE_PATH=./src/ && CI=true react-scripts test --env=jsdom",
+    "jenkins:test": "export NODE_PATH=./src/ && CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
 }
