@@ -4,14 +4,14 @@ Url to TicTacToe instance: http://ec2-52-56-90-167.eu-west-2.compute.amazonaws.c
 
 Public url to Datadog : https://p.datadoghq.com/sb/0f4735e57-017f27a520
 
-List of things finished:
+List of things completed:
 
 1. #### Completed the migrations needed for the application to work
     By using node's db-migrate, we were able to create a database migration script relatively easily.  
 
 2. #### On Git push Jenkins pulls my code and the Tic Tac Toe application is deployed through a build pipeline, but only if all my tests are successful
-
     All good.
+    
 3. #### Filled out the Assignments: for the API and Load tests
     Answers here: [API and Load test assignment](apitest/Assignment.md)
 
