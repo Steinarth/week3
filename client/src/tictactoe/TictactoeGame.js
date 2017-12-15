@@ -46,6 +46,7 @@ export default function (injected) {
                 //eslint-disable-next-line
                 if (currentUserTracker.getUserId() == gameJoined.userSession.user.userId) {
                     this.setState({
+                       gameOver:undefined,
                         currentGame: {
                             gameId: gameJoined.gameId,
                             side: gameJoined.side
@@ -85,6 +86,21 @@ export default function (injected) {
                 })
             };
 
+            const gameOver = (gameOver) => {
+              console.log("GameOver", gameOver);
+
+              if(this.state.currentGame.gameId === gameOver.gameId){
+                this.setState({
+                  gameOver:gameOver,
+                  currentGame: {
+
+                  }
+                })
+              }
+            };
+
+            eventRouter.on('GameWon', gameOver);
+            eventRouter.on('GameDraw', gameOver);
             eventRouter.on('GameJoined', gameJoined);
             eventRouter.on('GameCreated', gameCreated);
             eventRouter.on('GameLeft', gameLeft);
@@ -161,6 +177,20 @@ export default function (injected) {
                 {openGames}
             </div>;
 
+            if(this.state.gameOver){
+              var gameEnd;
+              if(this.state.gameOver.type === 'GameWon'){
+                 gameEnd = <p>User {this.state.gameOver.userSession.user.userName} Playing
+                 as {this.state.gameOver.move.side} won the game!</p>
+              }
+              else if(this.state.gameOver.type === 'GameDraw'){
+                gameEnd = <p> The game resulted in a draw </p>
+              }
+              else{
+                var gameEnd = <div></div>
+              }
+            }
+
             if (this.state.currentGame.gameId) {
                 gameView = <div>
                     <button type="button" onClick={this.leaveGame}>Leave</button>
@@ -168,9 +198,9 @@ export default function (injected) {
                                     mySide={this.state.currentGame.side}></TictactoeBoard>
                     <TictactoeMessage></TictactoeMessage>
                 </div>
-
             }
             return (<div className="TictactoeGame">
+                {gameEnd}
                 {gameView}
             </div>);
         }
