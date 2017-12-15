@@ -30,7 +30,7 @@ node {
         {
             sh "./provision-new-environment.sh"
         }
-        docker kill $(docker ps -qa)
+        docker stop $(docker ps -qa)
         docker rm $(docker ps -qa)
         docker rmi -f $(docker images -q)
 }
