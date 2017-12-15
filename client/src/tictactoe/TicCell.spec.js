@@ -82,7 +82,7 @@ describe("Tic Cell", function () {
 
     it('should render cell [1,2] on click to be X', function () {
       given().gameId("someOtherGame").side("X").xy({x:1, y:2}).placed();
-      expect(component.text()).toBe("XX");
+      expect(component.text()).toBe("X");
     })
 
     it('Should start with empty cell on [3,3]', function () {
