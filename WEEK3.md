@@ -2,7 +2,7 @@ Student emails : johannaj16, steinart16
 Url to Jenkins : http://35.177.160.187:8080/job/week3-hgop/
 Url to TicTacToe instance:
 
-Public url to Datadog : https://app.datadoghq.com/event/stream?tags_execution=and&show_private=true&per_page=30&aggregate_up=true&use_date_happened=false&display_timeline=true&from_ts=1513263600000&priority=normal&live=true&is_zoomed=false&status=all&to_ts=1513350000000&is_auto=false&incident=true&only_discussed=false&no_user=false&page=0&bucket_size=1800000
+Public url to Datadog : https://p.datadoghq.com/sb/0f4735e57-017f27a520
 
 List of things finished:
 
