@@ -1,4 +1,4 @@
-Student emails : johannaj16, steinart16
+Students emails : johannaj16, steinart16
 Url to Jenkins : http://ec2-35-177-51-204.eu-west-2.compute.amazonaws.com:8080/job/week3-hgop/  
 Url to TicTacToe instance: http://ec2-52-56-90-167.eu-west-2.compute.amazonaws.com:8080
 
