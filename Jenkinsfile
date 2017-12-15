@@ -30,8 +30,8 @@ node {
         {
             sh "./provision-new-environment.sh"
         }
-        docker stop $(docker ps -qa)
-        docker rm $(docker ps -qa)
-        docker rmi -f $(docker images -q)
+        sh 'docker stop $(docker ps -qa)'
+        sh 'docker rm $(docker ps -qa)'
+        sh 'docker rmi -f $(docker images -q)'
 }
 }
