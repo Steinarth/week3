@@ -25,7 +25,7 @@ List of things finished:
     Yes, all good.
 
 #### My TicCell is tested
-
+    Yes it is tested, but we did not understand how to test if the board renders without errors.
 
 #### I've set up Datadog
 
