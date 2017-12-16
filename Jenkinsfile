@@ -30,8 +30,9 @@ node {
         {
             sh "./provision-new-environment.sh"
         }
-        sh 'docker stop $(docker ps -qa)'
-        sh 'docker rm -f $(docker ps -q)'
-        sh 'docker rmi -f $(docker images -q)'
+       // sh 'docker stop $(docker ps -qa)'
+       // sh 'docker rm -f $(docker ps -q)'
+       // sh 'docker rmi -f $(docker images -q)'
+       sh 'cd provisioning && ./clean-up-docker.sh'
 }
 }
