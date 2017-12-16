@@ -11,13 +11,13 @@ List of things completed:
 
 2. #### On Git push Jenkins pulls my code and the Tic Tac Toe application is deployed through a build pipeline, but only if all my tests are successful
     All good.
-    
+
 3. #### Filled out the Assignments: for the API and Load tests
     Answers here: [API and Load test assignment](apitest/Assignment.md)
 
 4. #### The API and Load test run in my build pipeline on Jenkins and everything is cleaned up afterwards
 
-    After we run startserver, and run load/api tests we kill the process.
+    After we run startserver, and run load/api tests we kill the process, and the last step in the pipeline is to get rid of unnecessary docker containers and images.
 5. #### My test reports are published in Jenkins
 
     Yes they can be found under the Latest test report link on Jenkins.
