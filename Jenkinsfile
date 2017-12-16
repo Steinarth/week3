@@ -3,8 +3,6 @@ node {
     stage('Clean') {
         // Clean files from last build.
         sh 'git clean -dfxq'
-        //sh 'docker stop $(docker ps -qa)'
-        //sh 'docker rm $(docker ps -qa)'
     }
     stage('Setup') {
         // Prefer yarn over npm.
@@ -30,9 +28,7 @@ node {
         {
             sh "./provision-new-environment.sh"
         }
-       // sh 'docker stop $(docker ps -qa)'
-       // sh 'docker rm -f $(docker ps -q)'
-       // sh 'docker rmi -f $(docker images -q)'
+       // Cleans containers and images from docker
        sh 'cd provisioning && ./clean-up-docker.sh'
 }
 }
